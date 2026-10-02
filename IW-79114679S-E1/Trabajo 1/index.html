@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERIKCHEF - Escuela de Cocina</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- CABECERA Y NAVEGACIÓN PRINCIPAL -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <h1>ERIK<span>CHEF</span></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#inicio" class="nav-link active" onclick="mostrarSeccion('inicio', this)">Inicio</a></li>
+          <li><a href="#cursos" class="nav-link" onclick="mostrarSeccion('cursos', this)">Cursos</a></li>
+          <li><a href="#horarios" class="nav-link" onclick="mostrarSeccion('horarios', this)">Horarios</a></li>
+          <li><a href="#inscripcion" class="nav-link" onclick="mostrarSeccion('inscripcion', this)">Inscripción</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECCIÓN 1: INICIO -->
+    <section id="inicio" class="seccion activa">
+      <div class="hero">
+        <h2>Aprende el Arte de la Cocina Profesional</h2>
+        <p>Cursos de gastronomía prácticos para todos los niveles con chefs de primera línea.</p>
+        <button class="btn" onclick="navegarA('cursos')">Ver Cursos Disponibles</button>
+      </div>
+
+      <div class="caracteristicas">
+        <div class="tarjeta">
+          <h3>Clases 100% Prácticas</h3>
+          <p>Cocinas con tu propia estación de trabajo y todos los ingredientes incluidos.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Grupos Reducidos</h3>
+          <p>Atención personalizada con un máximo de 10 alumnos por taller.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Certificación</h3>
+          <p>Recibe diplomas acreditativos al finalizar la formación.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: CURSOS -->
+    <section id="cursos" class="seccion">
+      <h2>Nuestros Cursos</h2>
+      <p>Explora la oferta formativa y selecciona el taller que mejor se adapte a ti.</p>
+
+      <div class="grid-cursos">
+        <article class="curso-card">
+          <span class="badge nivel-principiante">Principiante</span>
+          <h3>Fundamentos de Cocina</h3>
+          <p>Técnicas de corte, fondos, salsas madre y cocciones básicas.</p>
+          <p><strong>Duración:</strong> 4 semanas (16 hrs)</p>
+          <button class="btn-secundario" onclick="navegarA('inscripcion')">Inscribirme</button>
+        </article>
+
+        <article class="curso-card">
+          <span class="badge nivel-principiante">Principiante</span>
+          <h3>Pasta Fresca e Italiana</h3>
+          <p>Masa desde cero, rellenos artesanales y salsas tradicionales.</p>
+          <p><strong>Duración:</strong> 2 semanas (8 hrs)</p>
+          <button class="btn-secundario" onclick="navegarA('inscripcion')">Inscribirme</button>
+        </article>
+
+        <article class="curso-card">
+          <span class="badge nivel-intermedio">Intermedio</span>
+          <h3>Cocina Nikkei</h3>
+          <p>Fusión peruano-japonesa: ceviches, tiraditos y técnicas de sushi.</p>
+          <p><strong>Duración:</strong> 3 semanas (12 hrs)</p>
+          <button class="btn-secundario" onclick="navegarA('inscripcion')">Inscribirme</button>
+        </article>
+
+        <article class="curso-card">
+          <span class="badge nivel-intermedio">Intermedio</span>
+          <h3>Repostería Fina</h3>
+          <p>Atemperado de chocolate, hojaldres, cremas y postres emplatados.</p>
+          <p><strong>Duración:</strong> 4 semanas (16 hrs)</p>
+          <button class="btn-secundario" onclick="navegarA('inscripcion')">Inscribirme</button>
+        </article>
+
+        <article class="curso-card">
+          <span class="badge nivel-avanzado">Avanzado</span>
+          <h3>Cocina de Autor</h3>
+          <p>Esferificaciones, cocción a baja temperatura y emplatado vanguardista.</p>
+          <p><strong>Duración:</strong> 6 semanas (24 hrs)</p>
+          <button class="btn-secundario" onclick="navegarA('inscripcion')">Inscribirme</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: HORARIOS -->
+    <section id="horarios" class="seccion">
+      <h2>Horarios de Clases</h2>
+      <p>Consulta nuestra programación semanal. Todas las franjas cuentan con talleres programados.</p>
+
+      <div class="tabla-contenedor">
+        <table>
+          <thead>
+            <tr>
+              <th>Turno / Día</th>
+              <th>Lunes</th>
+              <th>Martes</th>
+              <th>Miércoles</th>
+              <th>Jueves</th>
+              <th>Viernes</th>
+              <th>Sábado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Mañana</strong><br><small>10:00 - 13:00</small></td>
+              <td><span class="badge nivel-principiante">Fundamentos</span></td>
+              <td><span class="badge nivel-principiante">Pasta Fresca</span></td>
+              <td><span class="badge nivel-principiante">Fundamentos</span></td>
+              <td><span class="badge nivel-intermedio">Repostería</span></td>
+              <td><span class="badge nivel-intermedio">Cocina Nikkei</span></td>
+              <td><span class="badge nivel-intermedio">Cocina Nikkei</span></td>
+            </tr>
+            <tr>
+              <td><strong>Tarde</strong><br><small>17:00 - 20:00</small></td>
+              <td><span class="badge nivel-intermedio">Repostería</span></td>
+              <td><span class="badge nivel-avanzado">Cocina Autor</span></td>
+              <td><span class="badge nivel-intermedio">Cocina Nikkei</span></td>
+              <td><span class="badge nivel-avanzado">Cocina Autor</span></td>
+              <td><span class="badge nivel-principiante">Pasta Fresca</span></td>
+              <td><span class="badge nivel-avanzado">Cocina Autor</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="leyenda-niveles">
+        <h4>Leyenda de Niveles:</h4>
+        <span class="badge nivel-principiante">Principiante</span>
+        <span class="badge nivel-intermedio">Intermedio</span>
+        <span class="badge nivel-avanzado">Avanzado</span>
+      </div>
+
+      <div class="informacion-contacto">
+        <h3>Horario de Atención e Información</h3>
+        <p><strong>Secretaría:</strong> Lunes a Viernes de 09:00 a 19:00 hs</p>
+        <p class="telefono"><strong>Teléfono de Atención:</strong> (+34) 912 345 678</p>
+        
+        <div class="politica">
+          <h4>Política de Flexibilidad y Cancelaciones</h4>
+          <p>Para avisar sobre cambios de fecha o ausencias, por favor llámanos con un mínimo de 24 horas de antelación al número indicado arriba.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: INSCRIPCIÓN -->
+    <section id="inscripcion" class="seccion">
+      <h2>Formulario de Inscripción</h2>
+      <p>Rellena tus datos para reservar tu plaza en nuestros talleres.</p>
+
+      <form id="formInscripcion" onsubmit="validarFormulario(event)">
+        
+        <!-- DATOS PERSONALES -->
+        <fieldset>
+          <legend>Datos Personales</legend>
+
+          <div class="campo">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ej. María García">
+          </div>
+
+          <div class="campo">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" required placeholder="ejemplo@email.com">
+          </div>
+
+          <div class="campo">
+            <label for="telefono">Teléfono *</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="600 000 000">
+          </div>
+
+          <!-- CAMPO DE ALERGIAS -->
+          <div class="campo">
+            <label for="alergias">Alergias o Intolerancias Alimentarias</label>
+            <textarea id="alergias" name="alergias" rows="3" placeholder="Indica si tienes alguna alergia (celiaquía, frutos secos, lactosa, etc.) o restricción dietética..."></textarea>
+          </div>
+        </fieldset>
+
+        <!-- ELECCIÓN DE CURSOS -->
+        <fieldset>
+          <legend>Selección de Talleres</legend>
+          <p class="subtitulo">Puedes marcar más de uno:</p>
+
+          <div class="opciones-cursos">
+            <label class="checkbox-label">
+              <input type="checkbox" name="talleres" value="Fundamentos de Cocina"> Fundamentos de Cocina
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="talleres" value="Pasta Fresca e Italiana"> Pasta Fresca e Italiana
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="talleres" value="Cocina Nikkei"> Cocina Nikkei
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="talleres" value="Repostería Fina"> Repostería Fina
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="talleres" value="Cocina de Autor"> Cocina de Autor
+            </label>
+          </div>
+
+          <!-- FECHA DE INICIO FIJA -->
+          <div class="campo" style="margin-top: 15px;">
+            <label for="fechaInicio">Fecha Estimada de Inicio (Fija):</label>
+            <input type="date" id="fechaInicio" name="fechaInicio" value="2026-10-15" readonly class="input-bloqueado">
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn">Confirmar Inscripción</button>
+      </form>
+
+      <div id="mensajeExito" class="mensaje-exito" style="display: none;">
+        ✔ ¡Inscripción enviada con éxito! Te contactaremos pronto.
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA COMÚN -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2026 ERIKCHEF Escuela de Cocina. Todos los derechos reservados.</p>
+      <p>Calle Gastronomía 12, Madrid | Tel: (+34) 912 345 678</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT PARA NAVEGACIÓN SPA Y VALIDACIÓN -->
+  <script>
+    function mostrarSeccion(idSeccion, enlace) {
+      // Ocultar todas las secciones
+      const secciones = document.querySelectorAll('.seccion');
+      secciones.forEach(sec => sec.classList.remove('activa'));
+
+      // Mostrar la sección seleccionada
+      const seccionDestino = document.getElementById(idSeccion);
+      if (seccionDestino) {
+        seccionDestino.classList.add('activa');
+      }
+
+      // Actualizar estado del menú de navegación
+      const enlaces = document.querySelectorAll('.nav-link');
+      enlaces.forEach(a => a.classList.remove('active'));
+
+      if (enlace) {
+        enlace.classList.add('active');
+      }
+    }
+
+    function navegarA(idSeccion) {
+      const enlace = document.querySelector(`a[href="#${idSeccion}"]`);
+      mostrarSeccion(idSeccion, enlace);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function validarFormulario(event) {
+      event.preventDefault();
+      
+      const checkboxes = document.querySelectorAll('input[name="talleres"]:checked');
+      if (checkboxes.length === 0) {
+        alert('Por favor, selecciona al menos un taller para inscribirte.');
+        return;
+      }
+
+      const mensaje = document.getElementById('mensajeExito');
+      mensaje.style.display = 'block';
+      document.getElementById('formInscripcion').reset();
+      
+      // Reestablecer la fecha fija que se borra al hacer reset()
+      document.getElementById('fechaInicio').value = '2026-10-15';
+
+      setTimeout(() => {
+        mensaje.style.display = 'none';
+      }, 5000);
+    }
+  </script>
+</body>
+</html>

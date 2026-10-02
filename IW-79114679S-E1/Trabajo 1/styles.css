@@ -1,0 +1,376 @@
+/* ESTILOS GENERALES Y RESETS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* CABECERA Y NAVEGACIÓN */
+header {
+  background-color: #1e293b;
+  color: #ffffff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #e11d48;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+nav a:hover, nav a.active {
+  color: #ffffff;
+  background-color: #334155;
+}
+
+/* CONTENEDOR PRINCIPAL */
+main {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+  flex: 1;
+  width: 100%;
+}
+
+/* CONTROL DE SECCIONES (SPA) */
+.seccion {
+  display: none;
+}
+
+.seccion.activa {
+  display: block;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #e11d48;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* SECCIÓN INICIO */
+.hero {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 30px;
+}
+
+.hero h2 {
+  border: none;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.caracteristicas {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  flex: 1;
+  min-width: 250px;
+}
+
+.tarjeta h3 {
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+/* CURSOS */
+.grid-cursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.curso-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.curso-card h3 {
+  margin: 10px 0;
+  color: #1e293b;
+}
+
+.curso-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+/* INSIGNIAS / BADGES DE NIVEL */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.nivel-principiante {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.nivel-intermedio {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.nivel-avanzado {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+/* TABLA DE HORARIOS */
+.tabla-contenedor {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+th {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+.leyenda-niveles {
+  margin-top: 20px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.informacion-contacto {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  margin-top: 25px;
+}
+
+.informacion-contacto h3 {
+  margin-bottom: 10px;
+}
+
+.telefono {
+  font-size: 1.1rem;
+  color: #e11d48;
+  margin-top: 5px;
+}
+
+.politica {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #cbd5e1;
+}
+
+/* FORMULARIO DE INSCRIPCIÓN */
+form {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  margin-top: 20px;
+}
+
+fieldset {
+  border: 1px solid #cbd5e1;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 8px;
+  color: #1e293b;
+}
+
+.campo {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.input-bloqueado {
+  background-color: #f1f5f9;
+  cursor: not-allowed;
+  color: #64748b;
+}
+
+.subtitulo {
+  margin-bottom: 10px;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.opciones-cursos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkbox-label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* BOTONES */
+.btn {
+  background-color: #e11d48;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #be123c;
+}
+
+.btn-secundario {
+  background-color: #1e293b;
+  color: #ffffff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-secundario:hover {
+  background-color: #334155;
+}
+
+.mensaje-exito {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* PIE DE PÁGINA */
+footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+.footer-container p {
+  margin: 5px 0;
+}
